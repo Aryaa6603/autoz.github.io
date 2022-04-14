@@ -1,0 +1,278 @@
+body {
+  font-family: "Inter", sans-serif;
+  max-width: 150rem;
+  padding: 0.25;
+  margin: 0 auto;
+  color: #ffffff;
+  background-image: linear-gradient(120deg,#0823bd,#fff);
+}
+
+.quotes {
+  width: 80vw;
+  min-height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  z-index: 0;
+  align-items: right;
+}
+
+.quotes .box {
+  position: relative;
+  width: 15vw;
+  height: 20vh;
+  min-height: 320px;
+  background: #000000;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 2;
+  box-sizing: border-box;
+  padding: 30px;
+  box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+
+.quotes .box::after {
+  content: '\201D';
+  position: absolute;
+  bottom: -10%;
+  right: 5%;
+  font-size: 120px;
+  opacity: 0.2;
+  background: transparent;
+  filter: invert(1);
+  pointer-events: none;
+}
+
+.quotes .box p {
+  margin: 0;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+.quotes .box h2 {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  bottom: 10%;
+  right: 10%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+
+
+.quotes .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.quotes .box.box1:hover,
+.quotes .box.box1:hover~.bg {
+  opacity: 100;
+  background: #e2a9e5;
+background: -moz-linear-gradient(-45deg, #4c35a0 15%, #569fac 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2a9e5', endColorstr='#2b94e5',GradientType=1 );
+}
+
+.quotes .box.box2:hover,
+.quotes .box.box2:hover~.bg {
+  opacity: 100;
+  background: #632c65;
+background: -moz-linear-gradient(-45deg, #632c65 15%, #56a5e2 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#632c65', endColorstr='#56a5e2',GradientType=1 );
+}
+
+.quotes .box.box3:hover,
+.quotes .box.box3:hover~.bg {
+  opacity: 100;
+  background: #4b384c;
+background: -moz-linear-gradient(-45deg, #260347 15%, #02d4ca 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b384c', endColorstr='#da5de2',GradientType=1 );
+}
+
+.quotes .box.box4:hover,
+.quotes .box.box.box4:hover:hover~.bg {
+  opacity: 100;
+  background: #8560b6;
+background: -moz-linear-gradient(-45deg, #284b9b 15%, #dbc0dd 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b384c', endColorstr='#da5de2',GradientType=1 );
+}
+
+  h3 {
+    font-weight: 900;
+    font-size: 2rem;
+    max-width: 90ch;
+    text-align:center;
+  }
+  
+  p {
+    font-weight: 900;
+    font-size: 3rem;
+    max-width: 50ch;
+    text-align:top;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  a {
+    color: currentcolor;
+  }
+  
+  /* Utilities */
+  .auto-grid {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--auto-grid-min-size, 14rem), 1fr)
+    );
+    grid-gap: var(--auto-grid-gap, 0);
+    padding: 0;
+  }
+  
+  .flow > * + * {
+    margin-top: var(--flow-space, 1em);
+  }
+  
+  /* Composition */
+  .team {
+    --flow-space: 2em;
+  }
+  
+  /* Blocks */
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    aspect-ratio: 1/1;
+    position: relative;
+    padding: 1.5rem;
+    color: #ffffff;
+    backface-visibility: hidden;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  
+  .profile::before,
+  .profile::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /*inset: 0;*/
+    top: 0;
+    left: 0;
+  }
+  
+  .profile::before {
+    background: linear-gradient(
+      to top,
+      rgba(128, 127, 127, 0.79) 0%,
+      hsl(128, 127, 127 / 0.787) 7.8%,
+      hsl(128, 127, 127/ 0.779) 14.4%,
+      hsl(128, 127, 127/ 0.765) 20.2%,
+      hsl(128, 127, 127 / 0.744) 25.3%,
+      hsl(128, 127, 127 / 0.717) 29.9%,
+      hsl(128, 127, 127 / 0.683) 34.3%,
+      hsl(128, 127, 127 / 0.641) 38.7%,
+      hsl(128, 127, 127/ 0.592) 43.3%,
+      hsl(128, 127, 127 / 0.534) 48.4%,
+      hsl(128, 127, 127/ 0.468) 54.1%,
+      hsl(128, 127, 127 / 0.393) 60.6%,
+      hsl(128, 127, 127 / 0.31) 68.3%,
+      hsl(128, 127, 127 / 0.216) 77.3%,
+      hsl(128, 127, 127/ 0.113) 87.7%,
+      hsl(128, 127, 127 / 0) 100%
+    );
+    transition: 300ms opacity linear;
+  }
+  
+  .profile::after {
+    background: linear-gradient(
+      45deg,
+      rgba(235, 193, 233, 0.3) 0,
+      rgba(241, 237, 236, 0) 100%
+    );
+    opacity: 0;
+    transition: 300ms opacity linear;
+  }
+  
+  .profile > * {
+    z-index: 1;
+  }
+  
+  .profile img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: -1;
+    object-fit: cover;
+    filter: grayscale(1);
+    transition: filter 200ms ease, transform 250ms linear;
+  }
+  
+  .profile h2,
+  .profile p {
+    transform: translateY(2ex);
+  }
+  
+  .profile h2 {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: 0.03ch;
+    transition: 300ms transform ease;
+  }
+  
+  .profile p {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .profile p {
+    opacity: 0;
+    transition: 300ms opacity linear, 300ms transform ease-in-out;
+  }
+  
+  .profile:focus {
+    outline: 0.5rem solid white;
+    outline-offset: -0.5rem;
+  }
+  
+  .profile:hover :is(h2, p),
+  .profile:focus :is(h2, p) {
+    transform: none;
+  }
+  
+  .profile:hover::after,
+  .profile:focus::after,
+  .profile:hover::before,
+  .profile:focus::before {
+    opacity: 0.7;
+  }
+  
+  .profile:hover p,
+  .profile:focus p {
+    opacity: 1;
+    transition-delay: 200ms;
+  }
+  
+  .profile:hover img,
+  .profile:focus img {
+    filter: grayscale(0);
+    transform: scale(1.05) rotate(1deg);
+  }
