@@ -20,7 +20,7 @@ a {
 }
 
 a:hover, a:active, a:focus {
-  color: #0823bd;
+  color: #eab815;
   outline: none;
   text-decoration: none;
 }
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #0823bd;
+  background: #eab815;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #0823bd;
+  background: #eab815;
   color: #fff;
 }
 .back-to-top.active {
