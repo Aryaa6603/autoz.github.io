@@ -513,6 +513,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b384c', end
   .profile:hover :is(h2, p),
   .profile:focus :is(h2, p) {
     transform: none;
+    color:#fff;
   }
   
   .profile:hover::after,
